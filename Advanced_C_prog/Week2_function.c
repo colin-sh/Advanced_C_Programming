@@ -1,6 +1,6 @@
 #include<stdio.h>
-/*
 
+/*
 //수업중 실습10
 int g = 0;
 int div(int a, int b) {
