@@ -140,7 +140,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Week1_Array.c" />
-    <ClCompile Include="Week2_function.c" />
+    <ClCompile Include="Week2_Function.c" />
+    <ClCompile Include="Week3_Pointer.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

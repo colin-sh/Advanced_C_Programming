@@ -18,7 +18,10 @@
     <ClCompile Include="Week1_Array.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Week2_function.c">
+    <ClCompile Include="Week3_Pointer.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Week2_Function.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
