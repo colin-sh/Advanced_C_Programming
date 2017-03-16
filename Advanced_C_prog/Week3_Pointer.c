@@ -8,6 +8,10 @@ int main() {
 	printf("%p %p\n", p1, p2);
 	printf("%p %p\n", p1+1, p2+1);
 	printf("%p %p\n", p1+2, p2+2);
+	printf("%p %p\n", p1 + 3, p2 + 3);
+	printf("%p %p\n", p1 + 4, p2 + 4);
+	printf("%p %p\n", p1 + 5, p2 + 5);
+	printf("%p %p\n", p1 + 6, p2 + 6);
 
 	return 0;
 }
