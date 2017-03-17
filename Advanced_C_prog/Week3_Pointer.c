@@ -1,5 +1,20 @@
 #include <stdio.h>
 
+int main() {
+	char car[5] = { 'H','e','l','l','o' }, *cp = car;
+	double dar[5] = { 1.1,2.2,3.3,4.4,5.5 }, *dp = dar;
+	printf("%p %c %c\n", cp, cp[0], *cp);
+	printf("%p %c %c\n", cp + 1, cp[1], *(cp + 1));
+	printf("%p %c %c\n", cp + 2, cp[2], *(cp + 2));
+	printf("\n");
+	printf("%p / %.1f / %f\n", dp, dp[0], *dp);
+	printf("%p / %.1f / %f\n", dp + 1, dp[1], *(dp + 1));
+	printf("%p / %.1f / %f\n", dp + 2, dp[2], *(dp + 2));
+
+	return 0;
+}
+
+/*
 //수업중 실습6
 int main() {
 	int *p1 = NULL;
@@ -15,7 +30,7 @@ int main() {
 
 	return 0;
 }
-
+*/
 /*
 //수업중 실습5
 int main() {
