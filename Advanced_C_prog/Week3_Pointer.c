@@ -1,16 +1,504 @@
 #include <stdio.h>
 
+//실습 15
+int arrsum(int *a, int *b) {
+	int sum = 0;
+	for (a; a < b; a++) {
+		sum = sum + *a;
+	}
+	return sum;
+}
+
 int main() {
-	int ar[5] = { 2, 3, 5, 7, -1 }, i = 4; 
-	int *p = &ar[1];
-	printf("%p %d\n", p, *p);
-	printf("%p %d\n", --p, *p);
-	printf("%p %d\n", p+i, *(p+i));
+	int n[101];
+	int num, a, b; 
+	int sum_t = 0;
+	int *pn = n;
 
+	scanf("%d %d %d", num, a, b);
 
+	for (pn; pn < &n[num]; pn++) {
+		scanf("%d", pn);
+	}
+	pn = n;
+	sum_t = arrsum(pn + a, pn + b);
+
+	printf("%d", sum_t);
 	return 0;
 }
 
+/*
+//실습 14
+void ABC(int *start, int n) {
+	for (int i = 0; i < n; i++) {
+		if (*(start + i) > *start) {
+			int temp;
+			temp = *start;
+			*start = *(start + i);
+			*(start + i) = temp;
+		}
+	}
+}
+int main() {
+	int arr[11], i = 10;
+	int *parr = arr;
+
+	for (parr; parr < &arr[10]; parr++) {
+		scanf("%d", parr);
+	}
+	parr = arr;
+
+	for (parr; parr < &arr[10]; parr++) {
+		ABC(parr, i);
+		i--;
+	}
+
+	parr = arr;
+	for (parr; parr < &arr[10]; parr++) {
+		printf(" %d", *parr);
+	}
+}
+*/
+/*
+//실습 13
+void arrArray(int *a, int *b, int *c, int n) {
+	for (int i = 0; i < n; i++) {
+		*(c+i) = *(a + i) + *(b + (n-i-1));
+		
+	}
+}
+int main() {
+	int arr1[21], arr2[21], arr3[21], n = 0;
+	int *parr1 = arr1, *parr2 = arr2, *parr3 = arr3;
+
+	scanf("%d", &n);
+	for (parr1; parr1 < &arr1[n]; parr1++) {
+		scanf("%d", parr1);
+	}
+	for (parr2; parr2 < &arr2[n]; parr2++) {
+		scanf("%d", parr2);
+	}
+	parr1 = arr1;
+	parr2 = arr2;
+	arrArray(parr1, parr2, parr3, n);
+
+	parr3 = arr3;
+	for (parr3; parr3 < &arr3[n]; parr3++) {
+		printf(" %d", *parr3);
+	}
+
+	return 0;
+}
+*/
+/*
+//실습 12
+void strcopy(char a[], char b[]) {
+	char *tempa = a, *tempb = b;
+	for (tempa; tempa < &a[6]; tempa++) {
+		*tempb = *tempa;
+		tempb++;
+	}
+}
+int main() {
+	char arr1[7], arr2[7];
+	char *parr1 = arr1, *parr2 = arr2;
+	
+	scanf("%s", parr1);
+	strcopy(arr1, arr2);
+
+	for (parr2; parr2 < &arr2[6]; parr2++) {
+		printf("%c", *parr2);
+	}
+	return 0;
+}
+*/
+/*
+//실습 11
+int findeven(int arr[], int n) {
+	int count = 0;
+
+	for (int i=0; i < n; i++) {
+		if (arr[i] % 2 == 0)
+			count++;
+	}
+	return count;
+}
+int main() {
+	int arr[101], n = 0, count = 0;
+	int *parr = arr;
+	scanf("%d", &n);
+	for (parr; parr < &arr[n]; parr++) {
+		scanf("%d", parr);
+	}
+
+	parr = arr;
+	count = findeven(arr, n);
+
+	printf("%d", count);
+	return 0;
+}
+*/
+/*
+//실습 10
+int gcdlcm(int v1, int v2, int *a, int *b) {
+	int i, j;
+	int temp; //공약수를 저장할 변수
+
+	j = (v1<v2) ? v1 : v2; //둘중 작은수를 구함
+
+	for (i = 1; i <= j; i++) {
+		if (v1%i == 0 && v2%i == 0)
+			temp = i;
+	}
+	*a = temp;
+
+	j = (v1>v2) ? v1 : v2; //둘중 큰수를 구함
+	for (i = j;; i++) {
+		if (i%v1 == 0 && i%v2 == 0) {
+			temp = i;
+			break;
+		}
+	}
+	*b = temp;
+}
+int main() {
+	int a = 0, b = 0, k, j;
+	int *pa = &a, *pb = &b;
+	scanf("%d %d", &k, &j);
+	gcdlcm(k, j, pa, pb);
+	printf("%d %d", *pa, *pb);
+	return 0;
+}
+*/
+/*
+//실습 9
+void sum(int *a, int *b, int k, int j) {
+	*a = k + j;
+	*b = k - j;
+}
+int main() {
+	int a = 0, b = 0, k, j;
+	int *pa = &a, *pb = &b;
+	scanf("%d %d", &k, &j);
+	sum(pa, pb, k, j);
+
+	printf("%d %d", *pa, *pb);
+	return 0;
+}
+*/
+/*
+//실습 8
+void swap(int *a, int *b) {
+	int temp;
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}
+int main() {
+	int arr[51], n = 0, a = 0, b = 0;
+	int *parr = arr, *pa, *pb;
+
+	scanf("%d", &n);
+	for (parr; parr < &arr[n]; parr++) {
+		scanf("%d", parr);
+	}
+	scanf("%d %d", &a, &b);
+	parr = arr;
+	pa = (arr + a);
+	pb = (arr + b);
+	swap(pa, pb);
+
+	parr = arr;
+	for (parr; parr < &arr[n]; parr++) {
+		printf(" %d", *parr);
+	}
+
+	return 0;
+}
+*/
+/*
+//실습 7
+int main() {
+	int arr[51], n = 0, count = 0;
+	int *parr = arr;
+	
+	scanf("%d", &n);
+	for (parr; parr < &arr[n]; parr++) {
+		scanf("%d", parr);
+	}
+	parr = arr;
+	for (parr; parr < &arr[n]; parr++) {
+		if (*parr == 0) {
+			break;
+		}
+		else count++;
+	}
+	printf("%d", count);
+}
+*/
+/*
+//실습6
+int main() {
+	int arr[6];
+	int rank[6];
+	int *parr = arr, *prank = rank, *fprank = rank;
+
+	scanf("%d %d %d %d %d", parr, parr + 1, parr + 2, parr + 3, parr + 4);
+
+	for (parr; parr < &arr[5]; parr++) {
+		*prank = *parr;
+		prank++;
+	}
+	prank = rank;
+	for (prank; prank < &rank[5]; prank++) {
+		fprank = rank;
+		for (fprank; fprank < &rank[5] - prank; fprank++) {
+			if (fprank > prank) {
+				int *temp;
+				temp = fprank;
+				fprank = prank;
+				prank = temp;
+			}
+		}
+	}
+	prank = rank;
+	for (prank; prank < &rank[5]; prank++) {
+		printf("%d ", *prank);
+	}
+}
+*/
+/*
+//실습5
+int main() {
+	char arr[11];
+	int count_arr[11];
+	char *parr = arr;
+	char *fparr = arr;
+	int *pcount_arr = count_arr;
+	int count = 0, temp = 0, max=0, index = 0;
+
+	scanf("%s", parr);
+
+	for (fparr; fparr < &arr[10]; fparr++) {
+		for (parr; parr < &arr[10]; parr++)
+			if (*fparr == *parr) count++;
+		parr = arr;
+		*(pcount_arr + temp) = count;
+		temp++;
+		count = 0;
+	}
+
+	for (pcount_arr; pcount_arr < &count_arr[10]; pcount_arr++) {
+		if (*pcount_arr > max)
+			max = *pcount_arr;
+	}
+	pcount_arr = count_arr;
+	for (pcount_arr; pcount_arr < &count_arr[10]; pcount_arr++) {
+		if (*pcount_arr == max)
+			break;
+		else index++;
+	}
+	parr = arr;
+	pcount_arr = count_arr;
+	printf("%c %d", *(parr + index),*(pcount_arr+index));
+	return 0;
+}
+*/
+/*
+//실습4
+void swap(int *a, int *b);
+void quickSort(int *array, int startIndex, int endIndex);
+
+
+int main() {
+
+
+int arr[3] = {0,};
+int i = 0;
+int length = sizeof(arr) / sizeof(arr[0]);
+int *pArr = arr;
+
+while(i < length) {
+int result = scanf("%d", &arr[i]);
+if(result == 1) {
+i++;
+}
+}
+
+// 오름차순 정렬
+quickSort(pArr, 0, length - 1);
+
+
+i = 0;
+while(1) {
+i++;
+if(i == (length / 2)){
+printf("%d", *(pArr + i));
+break;
+}
+}
+
+return 0;
+}
+
+void swap(int *firstNumber, int *secondNumber) {
+int temp = 0;
+temp = *firstNumber;
+*firstNumber = *secondNumber;
+*secondNumber = temp;
+}
+
+void quickSort(int *array, int startIndex, int endIndex) {
+
+if(startIndex >= endIndex) {
+return;
+}
+
+int midIndex = (startIndex + endIndex) / 2;
+int pivot = *(array + midIndex);
+
+swap(array + startIndex, array + midIndex);
+
+int left = startIndex + 1, right = endIndex;
+
+while(1) {
+while(*(array + left) <= pivot) { left++; }
+while(*(array + right) > pivot) { right--; }
+
+if(left > right) {
+break;
+}
+swap(array + left, array + right);
+}
+
+swap(array + startIndex, array + right);
+quickSort(array, startIndex, right - 1);
+quickSort(array, right + 1, endIndex);
+
+}
+*/
+/*
+//실습3
+int main() {
+	char arr[21];
+	char *parr = arr;
+	scanf("%s", parr);
+
+	for (int i = 0; i < 20; i++) {
+		if (*(parr+i) == '#') {
+			for (int k = i - 1; k >= 0; k--) {
+				printf("%c", *(parr + k));
+			}
+			break;
+		}
+	}
+}
+*/
+/*
+//실습2
+void input(int *x, int *y, int *z) {
+	scanf("%d %d %d", x, y, z);
+}
+void output(int *x, int *y, int *z) {
+	printf("%d %d %d", *x, *y, *z);
+}
+int main() {
+	int x, y, z;
+	input(&x, &y, &z);
+	output(&x, &y, &z);
+	return 0;
+}
+*/
+/*
+//실습1
+int main() {
+	int x, y, z;
+	int *px, *py, *pz, *tmp;
+	px = &x;
+	py = &y;
+	pz = &z;
+	scanf("%d %d %d", px, py, pz);
+
+	tmp = px;
+	px = py;
+	py = pz;
+	pz = tmp;
+	printf("%d %d %d", *px, *py, *pz);
+	return 0;
+}
+*/
+
+/*
+//수업중 실습
+int main() {
+	int arr1[5] = { 4,5,6,7,8 };
+	int arr2[5] = { 1,3,5,7,9 };
+	int arr3[5] = { 0,2,4,6,8 };
+	int *parr[3];
+	parr[0] = arr1;
+	parr[1] = arr2;
+	parr[2] = arr3;
+
+	printf("%p %p %p ", parr[0], parr[1], parr[2]);
+	return 0;
+}
+*/
+/*
+//수업중 실습
+int *smaller(int *parr1, int *parr2) {
+	return (*parr1 > *parr2) ? parr2 : parr1;
+}
+
+int main() {
+	int arr[5] = { 2,1,3,0,4 };
+	int *p1;
+
+	p1 = smaller(&arr[1], &arr[3]);
+
+	printf("%d", *p1);
+	return 0;
+}
+*/
+/*
+//수업중 포인터 Swap 예제
+void swap(int x, int y) {
+	int tmp;
+	tmp = x;
+	x = y;
+	y = tmp;
+}
+void swap_Pointer(int *px, int *py) {
+	int tmp;
+	tmp = *px;
+	*px = *py;
+	*py = tmp;
+}
+int main() {
+	int x = 10, y = 20;
+
+	swap(x, y);
+	printf("%d %d\n", x, y);
+
+	swap_Pointer(&x, &y);
+	printf("%d %d\n", x, y);
+
+	return 0;
+}
+*/
+
+/*
+//수업중 실습7
+int main() {
+	int arr[10] = { 2,3,4,7,-1 };
+	int *p;
+	p = arr;
+	for (int i = 0; i < 10; i++) {
+		printf("%d ", *p);
+		p++;
+	}
+	return 0;
+}
+*/
 /*
 //수업중 실습6
 int main() {
