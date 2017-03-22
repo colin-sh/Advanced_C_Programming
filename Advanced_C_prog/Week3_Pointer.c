@@ -1,21 +1,22 @@
 #include <stdio.h>
 
+/*
 //실습 15
 int arrsum(int *a, int *b) {
 	int sum = 0;
-	for (a; a < b; a++) {
+	for (a; a <= b; a++) {
 		sum = sum + *a;
 	}
 	return sum;
 }
 
 int main() {
-	int n[101];
-	int num, a, b; 
+	int n[100] = { 0 };
+	int num = 0, a = 0, b = 0;
 	int sum_t = 0;
 	int *pn = n;
 
-	scanf("%d %d %d", num, a, b);
+	scanf("%d %d %d", &num, &a, &b);
 
 	for (pn; pn < &n[num]; pn++) {
 		scanf("%d", pn);
@@ -26,7 +27,7 @@ int main() {
 	printf("%d", sum_t);
 	return 0;
 }
-
+*/
 /*
 //실습 14
 void ABC(int *start, int n) {
@@ -239,31 +240,51 @@ int main() {
 /*
 //실습6
 int main() {
-	int arr[6];
-	int rank[6];
-	int *parr = arr, *prank = rank, *fprank = rank;
+	int arr[6], rank[6];
+	int *parr = arr, *prank = rank, *pprank;
+	int i = 0;
 
-	scanf("%d %d %d %d %d", parr, parr + 1, parr + 2, parr + 3, parr + 4);
-
-	for (parr; parr < &arr[5]; parr++) {
+	for (int i = 0; i < 5; i++) {
+		scanf("%d", parr);
 		*prank = *parr;
+		parr++;
 		prank++;
 	}
 	prank = rank;
+	parr = arr;
+
 	for (prank; prank < &rank[5]; prank++) {
-		fprank = rank;
-		for (fprank; fprank < &rank[5] - prank; fprank++) {
-			if (fprank > prank) {
-				int *temp;
-				temp = fprank;
-				fprank = prank;
-				prank = temp;
+		for (pprank = prank; pprank < &rank[5]; pprank++) {
+			if (*prank < *pprank) {
+				int temp;
+				temp = *prank;
+				*prank = *pprank;
+				*pprank = temp;
 			}
 		}
 	}
+
 	prank = rank;
-	for (prank; prank < &rank[5]; prank++) {
-		printf("%d ", *prank);
+	parr = arr;
+	for (parr; parr < &arr[5]; parr++) {
+		for (prank; prank < &rank[5]; prank++) {
+			
+			if (*parr == *prank) {
+				if (*parr == *(prank - 1)) {
+					printf("%d=r%d ", *parr, i);
+					break;
+				}
+				else {
+					i++;
+					printf("%d=r%d ", *parr, i);
+					break;
+				}
+			}
+			else
+				i++;
+		}
+		prank = rank;
+		i = 0;
 	}
 }
 */
