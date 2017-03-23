@@ -1,5 +1,101 @@
 #include <stdio.h>
 
+//과제4
+int main() {
+	int n = 0, *pn = &n;
+
+	scanf("%d", pn);
+	return 0;
+}
+
+/*
+//과제3
+int main() {
+	int arr[11], *parr = arr, *fparr = arr;
+	int n = 0, *pn = &n;
+	int k = 0, *pk = &k;
+	int i = 0, *pi = &i;
+
+	scanf("%d", pn);
+	for (parr; parr < &arr[0] + *pn; parr++) {
+		scanf("%d", parr);
+	}
+
+	if (*pn % 2 == 0) {
+		*pi = (*pn) / 2;
+		for (*pk; *pk < *pi; (*pk)++) {
+			printf(" %d", *(fparr + *pk) + *(parr - *pk -1));
+		}
+	}
+	else {
+		*pi = (*pn) / 2;
+		for (*pk; *pk < *pi; (*pk)++) {
+			printf(" %d", *(fparr + *pk) + *(parr - *pk - 1));
+		}
+		printf(" %d", *(fparr + *pk));
+	}
+	return 0;
+}
+*/
+/*
+//과제2
+void fib(int *a) {
+	int st1 = 1, st2 = 1, sum = 0;
+	int *pst1 = &st1, *pst2 = &st2, *psum = &sum;
+	int k = *a, *pk = &k;
+
+	for (*pk; *pk > 0; (*pk)--) {
+		if (*pk == *a || *pk == (*a) - 1) {
+			*psum = 1;
+		}
+		else {
+			*pst1 = *pst2;
+			*pst2 = *psum;
+			*psum = *pst1 + *pst2;
+		}
+	}
+	*a = *psum;
+
+}
+int main() {
+	int n, *pn = &n;
+	
+	scanf("%d", pn);
+	fib(pn);
+	printf("%d", *pn);
+	return 0;
+}
+*/
+/*
+//과제 1
+int main() {
+	int arr[11], count[11] = { 0 };
+	int *parr = arr, *pcount = count;
+
+	for (parr; parr < &arr[10]; parr++) {
+		scanf("%d", parr);
+		if (*parr < 0) {
+			break;
+		}
+	}
+	parr = arr;
+
+	for (parr; parr < &arr[10]; parr++) {
+		int k = *(pcount + *parr);
+		k++;
+		*(pcount + *parr) = k;
+	}
+
+	for (pcount; pcount < &count[10]; pcount++) {
+		for (*pcount; *pcount>0; (*pcount)--) {
+			printf("*");
+		}
+		printf("\n");
+	}
+	return 0;
+}
+*/
+
 /*
 //실습 15
 int arrsum(int *a, int *b) {
