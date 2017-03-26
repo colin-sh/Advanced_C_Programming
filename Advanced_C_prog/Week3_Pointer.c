@@ -2,9 +2,26 @@
 
 //°úÁ¦4
 int main() {
-	int n = 0, *pn = &n;
+	int n = 0, m = 0, *pn = &n, *pm = &m;
+	char arr[11], *parr = arr, *fparr = arr;
+	int i = 0, *pi = &i;
 
 	scanf("%d", pn);
+	scanf("%s", arr);
+	scanf("%d", pm);
+
+	for (*pi; *pi < *pm; (*pi)++) {
+		if (parr == fparr + (*pn)) {
+			parr = arr;
+			printf("%c", *parr);
+			parr++;
+		}
+		else {
+			printf("%c", *parr);
+			parr++;
+		}
+	}
+
 	return 0;
 }
 
