@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+/*
 //과제4
 int main() {
 	int n = 0, m = 0, *pn = &n, *pm = &m;
@@ -24,7 +24,7 @@ int main() {
 
 	return 0;
 }
-
+*/
 /*
 //과제3
 int main() {
