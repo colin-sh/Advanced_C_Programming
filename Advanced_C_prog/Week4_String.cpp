@@ -1,5 +1,136 @@
 #include<stdio.h>
 
+//과제4
+#include<string.h>
+int main() {
+	char str1[21], str2[21];
+	int temp = 0, run_size = 0;
+	
+	scanf("%s", str1);
+	scanf("%s", str2);
+	if (strlen(str1) > strlen(str2)) {
+		run_size = strlen(str1);
+		temp = strlen(str2);
+	}	
+	else {
+		run_size = strlen(str2);
+		temp = strlen(str1);
+	}
+
+	for (int i = 0; i < run_size; i++) {
+		if (i < temp) {
+			printf("%c%c", str1[i], str2[i]);
+		}
+		else {
+			if(strlen(str1) == run_size)
+				printf("%c", str1[i]);
+			else 
+				printf("%c", str2[i]);
+		}
+	}
+	return 0;
+}
+
+/*
+//과제3
+#include<string.h>
+int main() {
+	char str[21], def='a';
+	int n;
+	scanf("%s", str);
+	scanf("%d", &n);
+	
+	for (int i = 0; i < strlen(str); i++) {
+		if (((int)str[i] + n) <= 122) {
+			str[i] = (char)((int)str[i] + n);
+		}
+		else {
+			int k = ((int)str[i] + n) - 123;
+			str[i] = (char)((int)def + k);
+		}
+	}
+	printf("%s", str);
+	
+	return 0;
+}
+*/
+/*
+//과제2
+#include<string.h>
+int main() {
+	char str1[21], str2[21];
+
+	scanf("%s", str1);
+	scanf("%s", str2);
+
+	if (strlen(str1) % 2 == 0) {
+		for (int i = 0; i < strlen(str1)/2; i++) {
+			char temp;
+			temp = str1[i];
+			str1[i] = str1[(strlen(str1)-1) - i];
+			str1[(strlen(str1) - 1) - i] = temp;
+		}
+	}
+	else {
+		for (int i = 0; i < (strlen(str1)-1) / 2; i++) {
+			char temp;
+			temp = str1[i];
+			str1[i] = str1[(strlen(str1) - 1) - i];
+			str1[(strlen(str1) - 1) - i] = temp;
+		}
+	}
+
+	if (strlen(str2) % 2 == 0) {
+		for (int i = 0; i < strlen(str2) / 2; i++) {
+			char temp;
+			temp = str2[i];
+			str2[i] = str2[(strlen(str2) - 1) - i];
+			str2[(strlen(str2) - 1) - i] = temp;
+		}
+	}
+	else {
+		for (int i = 0; i < (strlen(str2) - 1) / 2; i++) {
+			char temp;
+			temp = str2[i];
+			str2[i] = str2[(strlen(str2) - 1) - i];
+			str2[(strlen(str2) - 1) - i] = temp;
+		}
+	}
+
+	printf("%d %d %s %s", strlen(str1), strlen(str2), str1, str2);
+	
+	return 0;
+}
+*/
+/*
+//과제1
+#include<string.h>
+int main() {
+	char str[31], check_str[31] = { NULL };
+	int arr[31] = { 0 }, flag = 0, check_temp = 0;
+	scanf("%s", str);
+
+	for (int i = 0; i < strlen(str); i++) {
+		for (int k = 0; k < strlen(check_str); k++) {
+			if (str[i] == check_str[k]) {
+				arr[k]++;
+				flag = 1;
+			}
+		}
+		if (flag == 0) {
+			check_str[check_temp] = str[i];
+			arr[check_temp]++;
+			check_temp++;
+		}
+		flag = 0;
+	}
+	for (int k = 0; k < strlen(check_str); k++) {
+		printf(" %c: %d", check_str[k], arr[k]);
+	}
+	return 0;
+}
+*/
+/*
 //실습12
 #include<string.h>
 int check(char *point) {
@@ -47,8 +178,7 @@ int main() {
 	k = check(pstr);
 	printf("%d %d", strlen(str), k);
 }
-
-
+*/
 /*
 //실습11
 #include<string.h>
