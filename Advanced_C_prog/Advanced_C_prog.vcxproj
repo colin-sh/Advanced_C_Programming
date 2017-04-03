@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Algorithm.cpp" />
     <ClCompile Include="Week1_Array.c" />
     <ClCompile Include="Week2_Function.c" />
     <ClCompile Include="Week3_Pointer.c" />

@@ -1,5 +1,6 @@
 #include<stdio.h>
 
+/*
 //과제4
 #include<string.h>
 int main() {
@@ -30,7 +31,7 @@ int main() {
 	}
 	return 0;
 }
-
+*/
 /*
 //과제3
 #include<string.h>
