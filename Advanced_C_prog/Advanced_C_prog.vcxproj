@@ -145,6 +145,7 @@
     <ClCompile Include="Week2_Function.c" />
     <ClCompile Include="Week3_Pointer.c" />
     <ClCompile Include="Week4_String.cpp" />
+    <ClCompile Include="Week5_Struct.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
