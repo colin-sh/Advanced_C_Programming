@@ -1,23 +1,6 @@
 ﻿  Week5_Struct.cpp
-c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(14): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 'scanf' 선언을 참조하십시오.
-c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(16): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 'scanf' 선언을 참조하십시오.
-c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(18): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 'scanf' 선언을 참조하십시오.
-c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(20): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 'scanf' 선언을 참조하십시오.
-c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(22): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 'scanf' 선언을 참조하십시오.
-c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(25): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 'scanf' 선언을 참조하십시오.
-c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(27): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 'scanf' 선언을 참조하십시오.
-c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(29): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 'scanf' 선언을 참조하십시오.
-c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(31): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 'scanf' 선언을 참조하십시오.
-c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(33): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 'scanf' 선언을 참조하십시오.
-  Advanced_C_prog.vcxproj -> C:\Users\SangHeonLee\documents\visual studio 2017\Projects\Advanced_C_prog\Debug\Advanced_C_prog.exe
-  Advanced_C_prog.vcxproj -> C:\Users\SangHeonLee\documents\visual studio 2017\Projects\Advanced_C_prog\Debug\Advanced_C_prog.pdb (Partial PDB)
+c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(8): error C2036: 'stundent *': 알 수 없는 크기입니다.
+c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(8): error C2440: 'return': 'stundent *'에서 'student *'(으)로 변환할 수 없습니다.
+  c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(8): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(15): error C2664: 'student *next_addr(stundent *)': 인수 1을(를) 'student [2]'에서 'stundent *'(으)로 변환할 수 없습니다.
+  c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(15): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
