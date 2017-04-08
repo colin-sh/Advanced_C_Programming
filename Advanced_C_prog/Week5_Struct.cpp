@@ -1,5 +1,19 @@
 #include<stdio.h>
+struct student {
+	int id; char name[8]; double grade;
+};
+struct student *next_addr(struct stundent *pst) {
+	return pst + 1;
+}
+int main() {
+	struct student st[2] =
+	{ { 10,"Tom",3.2 },{ 20,"Ann",3.5 } };
 
+	struct student *p;
+	p = next_addr(st);
+	printf("%d, %s, %.2f\n", p->id, p->name, p->grade);
+	return 0;
+}
 /*
 //구조ㅔ 주소를 반환하는 함수
 struct student {
