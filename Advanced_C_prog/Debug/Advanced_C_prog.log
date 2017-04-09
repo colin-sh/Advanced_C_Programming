@@ -1,6 +1,5 @@
 ﻿  Week5_Struct.cpp
-c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(8): error C2036: 'stundent *': 알 수 없는 크기입니다.
-c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(8): error C2440: 'return': 'stundent *'에서 'student *'(으)로 변환할 수 없습니다.
-  c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(8): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
-c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(15): error C2664: 'student *next_addr(stundent *)': 인수 1을(를) 'student [2]'에서 'stundent *'(으)로 변환할 수 없습니다.
-  c:\users\sangheonlee\documents\visual studio 2017\projects\advanced_c_prog\advanced_c_prog\week5_struct.cpp(15): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+  Algorithm.cpp
+  코드를 생성하고 있습니다...
+  Advanced_C_prog.vcxproj -> C:\Users\SangHeonLee\documents\visual studio 2017\Projects\Advanced_C_prog\Debug\Advanced_C_prog.exe
+  Advanced_C_prog.vcxproj -> C:\Users\SangHeonLee\documents\visual studio 2017\Projects\Advanced_C_prog\Debug\Advanced_C_prog.pdb (Partial PDB)
