@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+/*
 //문제12
 typedef struct {
 	char name[10];
@@ -49,6 +49,7 @@ int main() {
 	print_score(st);
 	return 0;
 }
+*/
 /*
 //문제11
 typedef struct {
