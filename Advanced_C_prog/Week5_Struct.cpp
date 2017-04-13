@@ -1,4 +1,133 @@
 #include<stdio.h>
+
+//과제 문제4
+typedef struct {
+	int year;
+	int month;
+	int day;
+} DATE;
+
+DATE * select_min(DATE *d1, DATE *d2) {
+
+	if (d1->year > d2->year) return d2;
+	else if (d2->year > d1->year) return d1;
+	if (d1->month > d2->month) return d2;
+	else if (d2->month > d1->month)return d1;
+	if (d1->day > d2->day) return d2;
+	else return d1;
+
+}
+
+int main() {
+	DATE date1 = { 0, };
+	DATE date2 = { 0, };
+	DATE *output = NULL;
+
+	scanf("%d/%d/%d", &date1.year, &date1.month, &date1.day);
+	scanf("%d/%d/%d", &date2.year, &date2.month, &date2.day);
+
+	output = select_min(&date1, &date2);
+
+	printf("%d/%d/%d", output->year, output->month, output->day);
+	return 0;
+}
+/*
+//과제 문제3 (좀 이상하게 푼거같다.
+typedef struct {
+	char name[10];
+	int point;
+} STUDENT;
+
+STUDENT* select_min(STUDENT *pst) {
+	return pst + 4;
+}
+int main() {
+	STUDENT st[5], *temp;
+	STUDENT *pst = st;
+
+	for (int i = 0; i < 5; i++) {
+		scanf("%s %d", &st[i].name, &st[i].point);
+	}
+
+	for (int i = 0; i<5 - 1; i++)
+	{
+		for (int j = 0; j<5 - 1; j++)
+		{
+			if (st[j].point < st[j + 1].point)
+			{
+				STUDENT temp = st[j];
+				st[j] = st[j + 1];
+				st[j + 1] = temp;
+			}
+		}
+	}
+
+	temp = select_min(pst);
+	printf("%s %d", temp->name,temp->point);
+	return 0;
+}
+*/
+/*
+//과제 문제2
+typedef struct {
+	char name[10];
+	int point;
+} STUDENT;
+
+STUDENT select_N(STUDENT *pst, int n) {
+	STUDENT temp;
+	temp = *(pst + n);
+	return temp;
+}
+int main() {
+	STUDENT st[5], temp;
+	STUDENT *pst = st;
+	int n;
+	for (int i = 0; i < 5; i++) {
+		scanf("%s %d", &st[i].name, &st[i].point);
+	}
+	scanf("%d", &n);
+
+	for (int i = 0; i<5 - 1; i++)
+	{
+		for (int j = 0; j<5 - 1; j++)
+		{
+			if (st[j].point < st[j + 1].point)
+			{
+				STUDENT temp = st[j];
+				st[j] = st[j + 1];
+				st[j + 1] = temp;
+			}
+		}
+	}
+	temp = select_N(pst, n - 1);
+	printf("%s %d", temp.name, temp.point);
+	return 0;
+}
+*/
+/*
+//과제 문제1
+#include<string.h>
+typedef struct {
+	char name[10];
+	int point;
+} STUDENT;
+int main() {
+	STUDENT st[5];
+	char findName[10];
+	for (int i = 0; i < 5; i++) {
+		scanf("%s %d", &st[i].name, &st[i].point);
+	}
+	scanf("%s", &findName);
+	
+	for (int i = 0; i < 5; i++) {
+		if (strcmp(st[i].name, findName) == 0) {
+			printf("%d", st[i].point);
+		}
+	}
+	return 0;
+}
+*/
 /*
 //문제12
 typedef struct {

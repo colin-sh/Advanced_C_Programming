@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -21,7 +22,7 @@ int main() {
 	cout << dp[n] << endl;
 	return 0;
 }
-
+*/
 /*
 #include<stdio.h>
 int gcd(int a, int b) {
