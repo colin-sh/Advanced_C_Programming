@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+/*
 //과제 문제4
 typedef struct {
 	int year;
@@ -31,6 +31,7 @@ int main() {
 	printf("%d/%d/%d", output->year, output->month, output->day);
 	return 0;
 }
+*/
 /*
 //과제 문제3 (좀 이상하게 푼거같다.
 typedef struct {

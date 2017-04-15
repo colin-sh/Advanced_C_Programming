@@ -1,6 +1,87 @@
 /*
 #include <iostream>
 #include <algorithm>
+#include <vector>
+using namespace std;
+
+int main() {
+	int n;
+
+	cin >> n;
+
+	vector<int> arr(n);
+
+	for (int i = 0; i < n; i++) {
+		cin >> arr[i];
+	}
+
+	if (prev_permutation(arr.begin(), arr.end())) {
+		for (int j = 0; j < n; j++) cout << arr[j] << ' ';
+		cout << endl;
+	}
+	else cout << -1 << endl;
+
+
+	return 0;
+}
+*/
+/*
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+
+int main() {
+	int n;
+
+	cin >> n;
+
+	vector<int> arr(n);
+
+	for (int i = 0; i < n; i++) {
+		cin >> arr[i];
+	}
+
+	if (next_permutation(arr.begin(), arr.end())) {
+		for (int j = 0; j < n; j++) cout << arr[j] << ' ';
+		cout << endl;
+	}
+	else cout << -1 << endl;
+
+
+	return 0;
+}
+*/
+/*
+#include <iostream>
+#include <stdio.h>
+#include <algorithm>
+#include <vector>
+using namespace std;
+
+int main() {
+	int n;
+
+	scanf("%d", &n);
+
+	vector<int> arr(n);
+
+	for (int i = 0; i<n; i++) {
+		arr[i] = i + 1;
+	}
+
+	do {
+		for (int j = 0; j < n; j++) printf("%d ", arr[j]);
+		printf("\n");
+	} while (next_permutation(arr.begin(), arr.end()));
+
+	return 0;
+}
+*/
+
+/*
+#include <iostream>
+#include <algorithm>
 using namespace std;
 
 int price[10001];
