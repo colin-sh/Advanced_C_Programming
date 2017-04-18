@@ -1,4 +1,24 @@
 #include<stdio.h>
+
+int main(void) {
+	int arr[3][2] = { 0 };
+	int sum = 0;
+
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 2; j++) {
+			scanf_s("%d", &arr[i][j]);
+		}
+	}
+
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 2; j++) {
+			sum += arr[i][j];
+		}
+		printf_s("%d\n", sum);
+		sum = 0;
+	}
+}
+
 /*
 //¹®Á¦ 12
 int main(void) {

@@ -1,4 +1,5 @@
 #include<stdio.h>
+
 /*
 //과제 문제4
 typedef struct {
