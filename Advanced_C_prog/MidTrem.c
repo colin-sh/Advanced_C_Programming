@@ -174,9 +174,101 @@ int main() {
 	return 0;
 }
 */
-
+/*
 //巩力9
 int main() {
+	int arr[3][2];
+	int sum = 0;
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 2; j++) {
+			scanf("%d", &arr[i][j]);
+		}
+	}
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 2; j++) {
+			sum += arr[i][j];
+		}
+		printf("%d\n", sum);
+		sum = 0;
+	}
+	return 0;
+}
+*/
+/*
+//巩力10
+int main() {
+	int arr[20];
+	int n;
 
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {
+		scanf("%d", &arr[i]);
+		printf(" %d", arr[i]);
+	}
+	return 0;
+}
+*/
+/*
+//巩力11
+int main() {
+	char cArr[3][2];
+	char insert, count = 0;
+	for (int i = 0; i < 3; i++) {
+		scanf("%c", &cArr[i][0]);
+	}
+	getchar();
+	for (int i = 0; i < 5; i++) {
+		scanf("%c", &insert);
+		getchar();
+
+		for (int j = 0; j < 3; j++) {
+			if (cArr[j][0] == insert) {
+				cArr[j][1] = '1';
+			}
+		}
+
+		for (int k = 0; k < 3; k++) {
+			if (cArr[k][1] == '1') {
+				printf(" %c", cArr[k][0]);
+				count++;
+			}
+			else {
+				printf(" _");
+			}
+		}
+		printf("\n");
+
+		if (count == 3) break;
+		else count = 0;
+	}
+
+	return 0;
+}
+*/
+
+//巩力12
+int main() {
+	int x[3][3], y[2][2];
+	int count = 0;
+
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			scanf("%d", &x[i][j]);
+		}
+	}
+
+	for (int i = 0; i < 2; i++) {
+		for (int j = 0; j < 2; j++) {
+			scanf("%d", &y[i][j]);
+		}
+	}
+
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			if (x[i][j] == y[0][0] && i + 1 < 3 && j + 1 < 3) {
+				//if(x[i+1] == y[][])
+			}
+		}
+	}
 	return 0;
 }
