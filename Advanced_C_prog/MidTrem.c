@@ -245,11 +245,11 @@ int main() {
 	return 0;
 }
 */
-
+/*
 //문제12
 int main() {
 	int x[3][3], y[2][2];
-	int count = 0;
+	int count = 0, temp_i = -1, temp_j = -1, flag = 0;
 
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; j < 3; j++) {
@@ -265,10 +265,50 @@ int main() {
 
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; j < 3; j++) {
+			printf(" %d", x[i][j]);
+		}
+		printf("\n");
+	}
+
+	for (int i = 0; i < 2; i++) {
+		for (int j = 0; j < 2; j++) {
+			printf(" %d", y[i][j]);
+		}
+		printf("\n");
+	}
+
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
 			if (x[i][j] == y[0][0] && i + 1 < 3 && j + 1 < 3) {
-				//if(x[i+1] == y[][])
+				if (x[i + 1][j] == y[1][0]) count++;
+				if (x[i][j + 1] == y[0][1]) count++;
+				if (x[i + 1][j + 1] == y[1][1]) count++;
 			}
+			if (count == 3 && flag == 0) {
+				temp_i = i;
+				temp_j = j;
+				flag = 1;
+			}
+			else count = 0;
 		}
 	}
+	if (temp_i != -1) {
+		printf("%d %d", temp_i, temp_j);
+	}
+	else
+		printf("none");
+	return 0;
+}
+*/
+
+// 8장 함수
+
+//문제1
+int add(int x, int y) {
+	return x + y;
+}
+int main() {
+
+
 	return 0;
 }
