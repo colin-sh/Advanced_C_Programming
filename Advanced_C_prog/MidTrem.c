@@ -302,13 +302,307 @@ int main() {
 */
 
 // 8장 함수
-
+/*
 //문제1
 int add(int x, int y) {
 	return x + y;
 }
 int main() {
+	int n, sum = 0;
+	scanf("%d", &n);
 
+	for (int i = 1; i <= n; i++) {
+		sum = add(sum, i);
+	}
+	printf("%d", sum);
+	return 0;
+}
+*/
+/*
+//문제2
+int sum(int n) {
+	return n*(n + 1) / 2;
+}
+int main() {
+	int a, b;
+
+	scanf("%d %d", &a, &b);
+	printf("%d", sum(b)-sum(a-1));
+	return 0;
+}
+*/
+/*/
+//문제3
+int sum(int n) {
+	return n*(n + 1) / 2;
+}
+int main() {
+	int n, total = 0;;
+	scanf("%d", &n);
+
+	for (int i = 1; i <= n; i++) {
+		total += sum(i);
+	}
+	printf("%d", total);
+	return 0;
+}
+*/
+/*
+//문제4
+void print_row1(int x) {
+	for (int i = 0; i < x; i++) {
+		printf("%d", x);
+	}
+	printf("\n");
+}
+void print_row2(int x) {
+
+	for (int i = 0; i < x; i++) {
+		if (i == 0 || i == x - 1) {
+			printf("%d", x);
+		}
+		else printf(" ");
+	}
+	printf("\n");
+}
+int main() {
+	int n;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++){
+		if (i == 0 || i == n - 1) {
+			print_row1(n);
+		}
+		else print_row2(n);
+	}
+	return 0;
+}
+*/
+/*
+//문제5
+void print_triangle(int x) {
+	for (int i = 1; i <= x; i++) {
+		for (int j = 0; j < i; j++) {
+			printf("*");
+		}
+		printf("\n");
+	}
+}
+int main() {
+	int n = 1;
+	while (n > 0) {
+		scanf("%d", &n);
+		print_triangle(n);
+	}
+	return 0;
+}
+*/
+
+//여기서부터 oj입력
+/*
+//문제6
+int func1(int x) {
+	return (2 * x*x) - (5 * x) + 1;
+}
+int main() {
+	int n;
+	scanf("%d", &n);
+	printf("%d", func1(n));
+	return 0;
+}
+*/
+/*
+//문제7
+int func2(int x, int a, int b, int c) {
+	return (a*x*x) + b*x + c;
+}
+int main() {
+	int n, a, b, c;
+	scanf("%d", &n);
+	scanf("%d %d %d", &a, &b, &c);
+
+	printf("%d", func2(n, a, b, c));
+	return 0;
+}
+*/
+/*
+//문제8
+int func2(int x, int a, int b, int c) {
+	return (a*x*x) + b*x + c;
+}
+int main() {
+	int n, x1, y1, z1, x2, y2, z2;
+	scanf("%d", &n);
+	scanf("%d %d %d", &x1, &y1, &z1);
+	scanf("%d %d %d", &x2, &y2, &z2);
+	printf("%d",func2(func2(n, x1, y1, z1), x2, y2, z2));
 
 	return 0;
 }
+*/
+/*
+//문제9
+int max1 = -2147483648, max2 = -2147483648;
+void update_max(int x) {
+	if (x > max1) {
+		max2 = max1;
+		max1 = x;
+	}
+	else if (x > max2) {
+		max2 = x;
+	}
+}
+int main() {
+	int n;
+
+	do {
+		scanf("%d", &n);
+		if (n != 0) {
+			update_max(n);
+		}
+	} while (n != 0);
+
+	printf("%d %d", max1, max2);
+	return 0;
+}
+*/
+/*
+//문제10
+int N;
+void die3(int x, int y, int z) {
+	if (x + y + z == N) {
+		printf("%d %d %d\n", x, y, z);
+	}
+}
+void die2(int x, int y) {
+	for (int i = 1; i <= 6; i++) {
+		die3(x, y, i);
+	}
+}
+void die1(int x) {
+	for (int i = 1; i <= 6; i++) {
+		die2(x, i);
+	}
+}
+
+int main() {
+	scanf("%d", &N);
+	for (int i = 1; i <= 6; i++) {
+		die1(i);
+	}
+
+	return 0;
+}
+*/
+/*
+//문제11
+int b1 = 0, b2 = 0, b3 = 0;
+int count_strike(int x, int y, int z) {
+	int s_count = 0;
+	if (x == b1) s_count++;
+	if (y == b2) s_count++;
+	if (z == b3) s_count++;
+	return s_count;
+}
+int count_ball(int x, int y, int z) {
+	int b_count = 0;
+	if (x == b2 || x == b3)b_count++;
+	if (y == b1 || y == b3)b_count++;
+	if (z == b1 || z == b2)b_count++;
+	return b_count;
+}
+int main() {
+	int x, y, z, flag = 0, s, b;
+	scanf("%d %d %d", &b1, &b2, &b3);
+	do {
+		scanf("%d %d %d", &x, &y, &z);
+		s = count_strike(x, y, z);
+		b = count_ball(x, y, z);
+		if (s == 3) {
+			printf("%dS%dB\n", s, b);
+			flag = 1;
+		}
+		else printf("%dS%dB\n", s, b);
+	} while (flag != 1);
+
+	return 0;
+}
+*/
+/*
+//문제12
+void print_line(int x, int y, int z) {
+	for (int i = 0; i < x; i++) {
+		printf(" ");
+	}
+	for (int i = 0; i < y; i++) {
+
+		printf("*");
+	}
+	for (int i = 0; i < z; i++) {
+		printf(" ");
+	}
+	printf("\n");
+}
+int main() {
+	int n;
+	int star = 1, maxStar = 0;
+	scanf("%d", &n);
+	maxStar = (n * 2) - 1;
+	for (int i = 0; i < n; i++) {
+		print_line((maxStar - star) / 2, star, (maxStar - star) / 2);
+		star += 2;
+	}
+	return 0;
+}
+*/
+/*
+//문제13
+int count_3(int n) {
+	int count = 0;
+	do {
+		if (n % 10 == 3) count++;
+		n = n / 10;
+	} while (n != 0);
+
+	return count;
+}
+int main() {
+	int n, sum = 0;
+	scanf("%d", &n);
+	for (int i = 1; i <= n; i++) {
+		sum += count_3(i);
+	}
+	printf("%d", sum);
+	return 0;
+}
+*/
+/*
+//문제14
+int is_prime(int x) {
+	for (int i = 2; i <= (x / 2); i++) {
+		if (x%i == 0) {
+			return 0;
+		}
+	}
+	return 1;
+}
+int next_prime(int x) {
+	int flag = -1;
+	while (flag != 1) {
+		x++;
+		flag = is_prime(x);
+	}
+	return x;
+}
+int main() {
+	int n, m;
+	scanf("%d%d", &n, &m);
+	for (int i = 0; i < m; i++) {
+		n = next_prime(n);
+		printf(" %d", n);
+	}
+
+	return 0;
+}
+*/
+
+//9장 포인터
