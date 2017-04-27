@@ -1433,4 +1433,40 @@ int main() {
 	return 0;
 }
 */
-//문제9
+/*//문제9
+
+typedef struct {
+	char name[21];
+	float am;
+	float pm;
+	float night;
+	float avg;
+} CITY;
+
+void input_info(CITY *pc) {
+	float sum = 0, avge = 0;
+	scanf("%s%f%f%f", pc->name, pc->am, pc->pm, pc->night);
+	sum = pc->am + pc->pm + pc->night;
+	avge = sum / 3;
+	pc->avg = avge;
+}
+void print_largest(CITY *pc, int N) {
+	int i = 0, max = 0;
+	for (i; i<N - 1; i++) {
+		if (pc[i].avg>pc[i + 1].avg)
+			max = i;
+	}
+	printf("%s %.1f", pc[max].name, pc[max].avg);
+}
+
+int main() {
+	int i, N;
+	CITY cities[30];
+	scanf("%d", &N);
+	for (i = 0; i<N; i++) {
+		input_info(&cities[i]);
+	}
+	print_largest(cities, N);
+	return 0;
+}
+*/
