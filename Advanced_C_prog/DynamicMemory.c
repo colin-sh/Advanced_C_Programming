@@ -63,7 +63,7 @@ int main() {
 	return 0;
 }
 */
-
+/*
 #include <string.h>
 typedef struct book_title {
 	char *title;
@@ -97,5 +97,29 @@ int main() {
 		free(bp[i].title);
 	}
 	free(bp);
+	return 0;
+}
+*/
+
+//PPT 25page ¿¹Á¦2
+int main() {
+	int n, i, sum = 0;
+	int *score = NULL;
+
+	scanf("%d", &n);
+	score = (int *)malloc(n * sizeof(int));
+
+	if (score == NULL) {
+		printf("Not enough memory!");
+		return -1;
+	}
+
+	for (i = 0; i < n; i++) {
+		scanf("%d", &score[i]);
+		sum += score[i];
+	}
+	printf("%.1f", (double)sum / n);
+	free(score);
+
 	return 0;
 }
