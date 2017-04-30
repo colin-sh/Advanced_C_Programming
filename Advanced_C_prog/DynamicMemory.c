@@ -100,7 +100,7 @@ int main() {
 	return 0;
 }
 */
-
+/*
 //PPT 25page ¿¹Á¦2
 int main() {
 	int n, i, sum = 0;
@@ -123,3 +123,4 @@ int main() {
 
 	return 0;
 }
+*/
